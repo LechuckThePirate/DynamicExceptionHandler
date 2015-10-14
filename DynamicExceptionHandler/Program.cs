@@ -34,7 +34,7 @@ namespace DynamicExceptionHandler
 
         private static ConsoleKeyInfo ReadOption()
         {
-            Console.WriteLine("Select 1, 2 or 3 to generate a exception. 4 to exit");
+            Console.WriteLine("Select to generate a exception\r\n1 - NullReference\r\n2 - DivideByZero\r\n3 - NotImplemented\r\n4 - Exit");
             var result = Console.ReadKey();
             Console.WriteLine();
             return result;
@@ -65,6 +65,9 @@ namespace DynamicExceptionHandler
                 catch (Exception ex)
                 {
                     DynExceptionHandler.HandleException(ex);
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
             } while (k.KeyChar != '4');
 
