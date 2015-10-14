@@ -1,0 +1,1 @@
+This little example project allows you to have clean try/catch blocks by using dynamic parameters to select the right overload.
